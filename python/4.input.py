@@ -1,0 +1,6 @@
+가격 =float(input('가격? '))
+부가세율 = 0.1
+부가세 = 가격 * 부가세율
+print(부가세)
+
+print('hello world'.replace('hello','hell'))
