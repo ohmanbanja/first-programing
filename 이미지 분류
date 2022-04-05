@@ -1,0 +1,25 @@
+Computer Vision and Object Detection
+Computer Vision API를 사용해서 이미지속에 있는 사물을 인식하는 데모 입니다. 네트워크 통신을 위해서 request 패키지를 import 합니다.
+
+import requests
+이미지처리를 위해서 matplotlib.pyplot, Image, BytesIO 세 개의 패키지를 import 합니다.
+
+matplotlib.pyplot는 import 할 때 시간이 조금 걸릴 수 있습니다.
+
+io
+import matplotlib.pyplot as plt
+from PIL import Image
+from io import BytesIO
+import json
+Subscription Key와 접속에 필요한 URL을 설정합니다
+
+subscription_key = '234a97e32f8447c19fbf3836053ff32c'
+vision_base_url = 'https://daeguaivision00.cognitiveservices.azure.com/vision/v2.0/'
+vision_base_url = vision_base_url +'analyze'
+image_url ='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F222D554655A18D19349EBD'
+response = requests.get(image_url)
+image = Image.open(BytesIO(response.content))
+image
+image
+
+​
