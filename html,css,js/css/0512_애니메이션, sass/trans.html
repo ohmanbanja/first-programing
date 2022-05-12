@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{width:200px; height: 134px;
+                border:1px solid black; 
+                margin:40px;perspective:200px;/*원근감*/}
+/*이미지 이동*/
+        .movex:hover{
+            -webkit-transform: translateX(50px);
+            -ms-transform: translateX(50px);
+            -moz-transform: translateX(50px);
+            -o-transform: translateX(50px);
+            transform: translateX(50px);
+        }  
+        .movey:hover{ transform: translateY(50px);}  
+        .movexy:hover{  transform: translate(10px, 20px);}
+/*이미지 확대, 축소 */
+        .scalex:hover{ transform: scaleX(1.5);}
+        .scaley:hover{ transform: scaleY(1.5);}
+        .scalexy:hover{ transform: scale(0.5,0.5);}
+/* 기울임 - 각도 */
+        .skewx:hover{ transform: skewX(40deg);}
+        .skewy:hover{ transform: skewY(20deg);}
+        .skewxy:hover{ transform: skew(30deg, -30deg);}
+/*회전*/
+      .rot:hover{ transform: rotate(90deg);}  
+/* 3차원 */
+        .rotx:hover{ transform: rotateX(45deg);}
+        .roty:hover{ transform: rotateY(45deg);}
+        .rotz:hover{ transform: rotateZ(45deg);}
+        .rotxyz:hover{ transform: rotate3d(2.5, 1.2, -1.5, 45deg);}
+    </style>
+</head>
+<body>  
+    <div class="origin">
+        <div class="rotx">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="roty">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rotz">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rotxyz">
+            <img src="bus.jpg">
+        </div>
+    </div>
+
+    
+       
+    <div class="origin">
+        <div class="rot">
+            <img src="bus.jpg">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="skewx">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="skewy">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="skewxy">
+            <img src="bus.jpg">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="scalex">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="scaley">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="scalexy">
+            <img src="bus.jpg">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="movex">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="movey">
+            <img src="bus.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="movexy">
+            <img src="bus.jpg">
+        </div>
+    </div>
+</body>
+</html>
