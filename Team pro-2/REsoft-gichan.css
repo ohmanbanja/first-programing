@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+}
+
+body{
+   position: relative;
+   font-family: 'Noto Sans KR', sans-serif;
+   background: #FFFFFF;
+   top:0;
+   left:0;
+   width:1920px;
+   height: 2548px;
+}
+
+header{
+   position: relative;
+   top: 0px;
+   left: 0px;
+   width: 1920px;
+   height: 80px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #DBDBDB;
+   opacity: 1;
+   z-index: 90;
+   
+}
+
+.ci-logo{
+   position: absolute;
+   top: 25px;
+   left: 360px;
+}
+
+.ci-logo img{
+   width: 133px;
+   height: 30px;
+   /* filter:invert(100%) sepia(100%) saturate(2%) hue-rotate(190deg) brightness(102%) contrast(101%); */
+}
+.nav-text a{
+   display: block;
+}
+.nav-text li{
+   letter-spacing: 0px;
+   color: #000000;
+   opacity: 1;
+   font-size: 20px;
+   font-weight: bold;
+   width: 74px;
+   height: 29px;
+   cursor: pointer;
+   text-transform:uppercase; 
+}
+
+
+.nav-text li:hover{
+   color: #184B9F;
+}
+/* .nav-text a:first-of-type li:after, */ /*<- 두번째, 세번째, 네번째 서브 해당되는 사람이면 살려야함*/
+.nav-text a:nth-of-type(2) li:after, /*<- 첫번째, 세번째, 마지막 서브해당되는 사람이면 살려야 함*/
+.nav-text a:last-of-type li:after{ /*<- 첫번째, 두번째 해당되는 서브만 살림*/
+   display:block;
+   margin-top: 3px;
+   content: '';
+   height: 6px;
+   background: #184B9F; 
+   border-radius: 3px; 
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+   transform-origin: 0% 50%;
+}
+
+/*.nav-text a:first-of-type li:hover:after,*/ /*위와 같은 규칙*/
+.nav-text a:nth-of-type(2) li:hover:after,
+.nav-text a:last-of-type li:hover:after{
+   transform: scaleX(1);
+}
+
+
+.nav-text a:first-of-type li{
+   position: absolute;
+   top: 26px;
+   left: 1198px;
+   color: #184B9F; /*<- 두번째, 세번째, 네번째 서브 해당되는 사람은 주석처리 해야 함*/
+}
+
+.nav-text .underline{
+   display:block;
+   width: 74px;
+   height: 6px;
+   background: #184B9F; 
+   border-radius: 3px; 
+}
+
+.under-1{
+   /* visibility: hidden;  */
+   position: absolute;
+   top: 59px;
+   left: 1198px;
+}
+.under-2{
+   visibility: hidden; /*<-두번째 서브 페이지는 주석처리 하고, 나머지 1이랑3은 살림*/
+   position: absolute;
+   top: 59px;
+   left: 1332px;
+}
+.under-3{
+   visibility: hidden;/*<-세번째,네번째(마지막) 서브 페이지는 주석처리 함 위의
+   under-1,2는 살려야 함*/
+   position: absolute;
+   top: 59px;
+   left: 1466px;
+}
+
+
+
+.nav-text a:nth-of-type(2) li{
+   position: absolute;
+   top: 26px;
+   left: 1332px;
+    /* color: #184B9F; */ /*<- 첫번째 세번째 네번째 서브 담당자는 주석처리해야함*/
+}
+.nav-text a:last-of-type li{
+   position: absolute;
+   top: 26px;
+   left: 1466px;
+    /* color: #184B9F; */ /*<-첫번째, 두번째 서브 담당자는 주석처리 해야함*/
+}
+
+.hamburger-menu{
+   position: absolute;
+   top: 24px;
+   left: 1648px;
+   width: 32px;
+   height: 32px;
+   cursor: pointer;
+   background: transparent url('/img/hamburger_menu_black.svg') 0% 0% no-repeat padding-box;
+   opacity: 1;
+}
+
+.hide-nave{
+   top: 24px;
+   left: 0px;
+   width: 1920px;
+   height: 263px;
+}
+
+.hide-nav-texts{
+   position: absolute;
+   top: 79px;
+   left: 0px;
+   width: 1920px;
+   height: 207px;
+   background: #184B9F 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   border-top: none;
+   opacity: 0.9;
+   color: #FFFFFF;
+}
+
+.hide-nav-texts a li{
+   text-align: left;
+   padding-bottom: 5px;
+   letter-spacing: 0px;
+   opacity: 1;
+   cursor: pointer;
+}
+.slide-nav-text-1{
+   position: absolute;
+   top: 10px;
+   left: 1196px;
+   width: 99px;
+   height: 145px;
+}
+
+.slide-nav-text-2{
+   position: absolute;
+   top: 10px;
+   left: 1331px;
+   width: 69px;
+   height: 87px;
+}
+
+.slide-nav-text-3{
+   position: absolute;
+   top: 10px;
+   left: 1468px;
+   width: 99px;
+   height: 29px;
+}
+
+.hide-nav-texts{
+   display: none;
+}
+
+/***************nav**************/
+
+.head-wrap img{
+    width: 1920px;
+}
+
+.head-wrap p {
+   position: absolute;
+   top: 201px;
+   left: 886px;
+   width: 148px;
+   height: 58px;
+   font-weight: 500;
+   color:white;
+   font-size:40px;
+}
+
+
+/*****************content*************/
+.content-text{
+    position: absolute;
+    top: 480px;
+    left: 240px;
+    width: 211px;
+    height: 58px;
+    text-align: left;
+    letter-spacing: 0;
+}
+
+.content-text p:nth-child(1){
+    color:black;
+    font-size: 40px;
+    font-weight: 700;
+ 
+}
+
+.content-text p:nth-child(2){
+    color:#c8c8c8;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+
+.content {
+    position: absolute;
+    top: 614px;
+    left: 240px;
+    width: 1440px;
+    height: 1545px;
+}
+
+.content-main-text p:nth-child(2){
+   font-size: 20px;
+   letter-spacing: 1px;
+   font-family: 'Noto Sans KR', sans-serif;
+   font-weight: bold;
+   text-align: left;
+   padding-bottom:8px;
+   padding-top:30px;
+}
+
+.content-main-text p:nth-child(3){
+   font-size: 16px;
+   text-align: left;
+   letter-spacing: 0.8px;
+   color: #AAAAAA;
+
+}
+.content-main{
+   display:flex;
+   flex-wrap: wrap;
+}
+
+.content-main-1{
+   margin-right: 40px;
+   margin-bottom: 50px;
+   width:680px;
+   height: 360px;
+   overflow: hidden;
+}
+
+
+
+.content-main-2{
+   margin-right: 100px;
+   margin-bottom: 50px;
+}
+
+.content-main-3{
+   margin-right: 100px;
+   margin-bottom: 50px;
+}
+
+.content-main img{
+   max-width: 100%;
+    max-height: 100%;
+       margin-right: 40px;
+   margin-bottom: 50px;
+   width:680px;
+   height: 360px;
+   overflow: hidden;
+      
+}
+
+.content-main img:hover {
+   transform: scale(1.40);
+}
+
